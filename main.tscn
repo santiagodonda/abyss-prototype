@@ -1,0 +1,752 @@
+[gd_scene format=3 uid="uid://cq4hdogtvfkwo"]
+
+[ext_resource type="Script" uid="uid://buufc5do0dfpw" path="res://player.gd" id="1_0xm2m"]
+[ext_resource type="Texture2D" uid="uid://d10v7g0srya4y" path="res://icon.svg" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://cnrnej3t5ry0x" path="res://wall.gd" id="3_1bvp3"]
+[ext_resource type="Script" uid="uid://cw2efaasnlts6" path="res://player_vitals.gd" id="3_82xsv"]
+[ext_resource type="Script" uid="uid://ctwv2opl50x4p" path="res://door.gd" id="3_h2yge"]
+[ext_resource type="Script" uid="uid://ddnmwq6lbakgf" path="res://wall_buttom.gd" id="4_5vw27"]
+[ext_resource type="Script" uid="uid://cpjiqvf514klt" path="res://player_health.gd" id="4_getpj"]
+[ext_resource type="Script" uid="uid://hkufbfuaajua" path="res://wall_left.gd" id="5_kek77"]
+[ext_resource type="Script" uid="uid://wxk76utpxkpo" path="res://revive_target.gd" id="5_ryguw"]
+[ext_resource type="Script" uid="uid://cbd3vydfb2ag1" path="res://wall_right.gd" id="6_4c57u"]
+[ext_resource type="Script" uid="uid://c7a8ony1wavs7" path="res://player_equipment.gd" id="6_lswn8"]
+[ext_resource type="Script" uid="uid://sglqdacmvusl" path="res://middle_wall_top.gd" id="7_efxa6"]
+[ext_resource type="Script" uid="uid://vshpovugvy1n" path="res://player_inventory.gd" id="7_qsp4k"]
+[ext_resource type="Script" uid="uid://dvnol603vqiuk" path="res://middle_wall_buttom.gd" id="8_kek77"]
+[ext_resource type="Script" uid="uid://be7h1urvafmn7" path="res://player_weapon_system.gd" id="8_qnost"]
+[ext_resource type="Script" uid="uid://dfbrif6x1e2u6" path="res://floor.gd" id="10_4c57u"]
+[ext_resource type="Script" uid="uid://cri3k2ruj5yp5" path="res://room.gd" id="11_2cqfq"]
+[ext_resource type="Script" uid="uid://t6du1lx37pas" path="res://hull_breach.gd" id="12_dg77c"]
+[ext_resource type="Script" uid="uid://0kntf5as5eu8" path="res://water_system.gd" id="13_ycdy4"]
+[ext_resource type="Script" uid="uid://ssg3et04amkf" path="res://pump.gd" id="14_w48qg"]
+[ext_resource type="Script" uid="uid://i7xwwwe2v48n" path="res://power_system.gd" id="15_2cqfq"]
+[ext_resource type="Script" uid="uid://dsn6c6kim4cai" path="res://network_interactable_component.gd" id="16_pjyto"]
+[ext_resource type="Script" uid="uid://cpar5hu4ejcfr" path="res://reactor.gd" id="16_yaehf"]
+[ext_resource type="Script" uid="uid://clte0xin8kqka" path="res://atmosphere_system.gd" id="17_074og"]
+[ext_resource type="Script" uid="uid://dxc2yp4w15alu" path="res://item_rack.gd" id="17_jq2sk"]
+[ext_resource type="Script" uid="uid://ciaw3vy4jyhh2" path="res://debug_hud.gd" id="18_cegan"]
+[ext_resource type="Script" uid="uid://d4avmu7w7riuo" path="res://oxygen_generator.gd" id="19_cegan"]
+[ext_resource type="Script" uid="uid://blmr2jba4ghci" path="res://pressure_system.gd" id="23_d13ii"]
+[ext_resource type="Script" uid="uid://dug3ywbiklhdy" path="res://submarine_environment.gd" id="24_1u8w0"]
+[ext_resource type="Script" uid="uid://c37mr0uwjq8co" path="res://pressure_regulator.gd" id="25_0odxb"]
+[ext_resource type="Script" uid="uid://ba7b25tkguq6" path="res://diving_gear_locker.gd" id="27_a6jrf"]
+[ext_resource type="Script" uid="uid://cl23cyhppnpp1" path="res://oxygen_tank_rack.gd" id="28_xuqvo"]
+[ext_resource type="Script" uid="uid://4i8pm7ecwikv" path="res://material_locker.gd" id="30_kq58d"]
+[ext_resource type="Script" uid="uid://b22v2pu652466" path="res://world_labels.gd" id="31_seu75"]
+[ext_resource type="Script" uid="uid://bgrnxuvhwwl8g" path="res://crafting_station.gd" id="32_htxhm"]
+[ext_resource type="Script" uid="uid://clnghxetuh4u0" path="res://machine_repair_point.gd" id="34_4k2k6"]
+[ext_resource type="Script" uid="uid://ce34i47xrkmhu" path="res://test_bot.gd" id="35_0rl1p"]
+[ext_resource type="Script" uid="uid://b0wffrscrdt5e" path="res://exterior_qa_test.gd" id="36_4lmeg"]
+[ext_resource type="Script" uid="uid://b52n78jm01rtl" path="res://machine_failure_system.gd" id="36_ok6jj"]
+[ext_resource type="Script" uid="uid://c75sxupwvfru4" path="res://hatch_qa_test.gd" id="37_d2t1y"]
+[ext_resource type="Script" uid="uid://dq2nl8en08bl4" path="res://gameplay_hud.gd" id="37_facbu"]
+[ext_resource type="Script" uid="uid://c256pgtnyqofu" path="res://creature_qa_test.gd" id="38_0n3wm"]
+[ext_resource type="Script" uid="uid://1ft0q6718eol" path="res://submarine_helm.gd" id="38_b1qrp"]
+[ext_resource type="Script" uid="uid://nfg1ddunmwhg" path="res://submarine_status.gd" id="39_come4"]
+[ext_resource type="Script" uid="uid://cqh3xo2ijn2wk" path="res://weapon_qa_test.gd" id="40_f6a44"]
+[ext_resource type="Script" uid="uid://0qclhy4euwnv" path="res://mission_state.gd" id="40_h8e4i"]
+[ext_resource type="Script" uid="uid://bu5qhofxp6nol" path="res://hull_attack_qa_test.gd" id="41_hrvbo"]
+[ext_resource type="Script" uid="uid://b0kyh1lgyxfwr" path="res://submarine_weapon_qa_test.gd" id="42_abqjc"]
+[ext_resource type="Script" uid="uid://8h614t3pgvpo" path="res://encounter_qa_test.gd" id="43_4w656"]
+[ext_resource type="Script" uid="uid://bki56riqoofft" path="res://exterior_hatch.gd" id="43_gngh3"]
+[ext_resource type="Script" uid="uid://c7ccqqox4n5e6" path="res://mission_success_qa_test.gd" id="44_rnkwl"]
+[ext_resource type="Script" uid="uid://cjowwd7vvbwl8" path="res://sea_creature.gd" id="45_qnost"]
+[ext_resource type="Script" uid="uid://bo4161f7jpt8h" path="res://hull_network_qa_test.gd" id="46_1vm84"]
+[ext_resource type="Script" uid="uid://dsmm1tt6dpuqj" path="res://hull_repair_network_qa_test.gd" id="47_wu3dr"]
+[ext_resource type="Script" uid="uid://dytggy1fc2rh1" path="res://item_dispenser.gd" id="48_0cbny"]
+[ext_resource type="Script" uid="uid://tpgnpx18v4tn" path="res://personal_ammo_network_qa_test.gd" id="48_cyx1q"]
+[ext_resource type="Script" uid="uid://cn5vkxkyplqbg" path="res://personal_ammo_api_diagnostic.gd" id="49_0dhbp"]
+[ext_resource type="Script" uid="uid://ifa1laveppkc" path="res://power_network_qa_test.gd" id="50_kkkcx"]
+[ext_resource type="Script" uid="uid://d0372vips4m7y" path="res://hull_integrity_point.gd" id="50_uypp3"]
+[ext_resource type="Script" uid="uid://0tgperng0wwc" path="res://revive_network_qa_test.gd" id="51_c2n8d"]
+[ext_resource type="Script" uid="uid://bqoy40vniq7ka" path="res://submarine_turret.gd" id="52_6iyjs"]
+[ext_resource type="Script" uid="uid://j03wfjfjexhv" path="res://crew_round_network_qa_test.gd" id="52_wy5fy"]
+[ext_resource type="Script" uid="uid://cbphnx7og32wc" path="res://submarine_turret_console.gd" id="53_4w656"]
+[ext_resource type="Script" uid="uid://dw0hcdocuiuj1" path="res://mission_network_qa_test.gd" id="53_phcyf"]
+[ext_resource type="Script" uid="uid://doglxxarc03jg" path="res://restart_policy_network_qa_test.gd" id="54_birbe"]
+[ext_resource type="Script" uid="uid://bt31mqj5u4yxh" path="res://encounter_manager.gd" id="55_e71vb"]
+[ext_resource type="Script" uid="uid://bmca4ccnxygnd" path="res://player_movement_network_qa_test.gd" id="55_f1p13"]
+[ext_resource type="Script" uid="uid://5r75smws5fgd" path="res://reconnect_state_network_qa_test.gd" id="56_4obbf"]
+[ext_resource type="Script" uid="uid://3ki2j6k8vlix" path="res://global_skeleton_network_qa_test.gd" id="57_ovcoh"]
+[ext_resource type="Script" uid="uid://cennec2x6pymj" path="res://mission_objective.gd" id="57_vke2r"]
+[ext_resource type="Script" uid="uid://cbajhgahrpqr4" path="res://mobile_joystick.gd" id="58_vke2r"]
+[ext_resource type="Script" uid="uid://m1yn0kjinlg2" path="res://network_debug_panel.gd" id="59_uit24"]
+[ext_resource type="Script" uid="uid://bfoompbi6jugf" path="res://network_player_manager.gd" id="60_ruth0"]
+[ext_resource type="Script" uid="uid://b73mwmfn36g0w" path="res://network_interaction_manager.gd" id="61_rm4vd"]
+[ext_resource type="Script" uid="uid://onkgvlxtwo85" path="res://network_environment_manager.gd" id="63_sm6fg"]
+[ext_resource type="Script" uid="uid://bib4aq2bpc5bp" path="res://network_creature_manager.gd" id="64_b17eg"]
+[ext_resource type="Script" uid="uid://cm7wv3vydrnl2" path="res://network_combat_manage.gd" id="65_ntx8l"]
+[ext_resource type="Script" uid="uid://b71sp32aa0sxn" path="res://network_player_health_manager.gd" id="66_uatky"]
+[ext_resource type="Script" uid="uid://tkvnjc5fpmh6" path="res://network_hull_manager.gd" id="67_rqtf5"]
+[ext_resource type="Script" uid="uid://d01s8qp0cyupg" path="res://network_power_manager.gd" id="72_jx0wj"]
+[ext_resource type="Script" uid="uid://cielmcjcpnd0b" path="res://network_revive_manager.gd" id="74_34ol3"]
+[ext_resource type="Script" uid="uid://dwcxu2kryicnq" path="res://network_crew_round_manager.gd" id="77_gx4rg"]
+[ext_resource type="Script" uid="uid://cclm4i7yetp3r" path="res://network_mission_manager.gd" id="79_birbe"]
+[ext_resource type="Script" uid="uid://b53jpnj2nj6on" path="res://android_network_join_panel.gd" id="84_ppx11"]
+[ext_resource type="Script" uid="uid://ke6uig5qydbm" path="res://coop_qa_runner.gd" id="85_1yv1y"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8w0r3"]
+radius = 90.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h4t55"]
+radius = 60.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4e15o"]
+size = Vector2(1890, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ydnqi"]
+size = Vector2(1890, 30)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h2yge"]
+size = Vector2(30, 880)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0xm2m"]
+size = Vector2(30, 880)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1bvp3"]
+size = Vector2(30, 200)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lquwl"]
+size = Vector2(30, 560)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cd40g"]
+size = Vector2(30, 120)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_10eym"]
+size = Vector2(50, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wu3dr"]
+size = Vector2(220, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4t4i"]
+size = Vector2(90, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nwfxe"]
+size = Vector2(110, 110)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h4t55"]
+size = Vector2(90, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w7mgy"]
+size = Vector2(120, 140)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_58dcl"]
+size = Vector2(80, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0tov0"]
+size = Vector2(80, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i6540"]
+size = Vector2(90, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_as0yd"]
+size = Vector2(100, 100)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_w7mgy"]
+radius = 14.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_paknd"]
+size = Vector2(110, 90)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_n26i0"]
+size = Vector2(120, 190)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l3xep"]
+size = Vector2(90, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_md32b"]
+size = Vector2(90, 70)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfax6"]
+size = Vector2(100, 80)
+
+[node name="main" type="Node2D" unique_id=532933828]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=581586548]
+z_index = 10
+position = Vector2(640, 360)
+motion_mode = 1
+script = ExtResource("1_0xm2m")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1498186581]
+shape = SubResource("RectangleShape2D_8w0r3")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=1393597565]
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("1_ig7tw")
+
+[node name="InteractionArea" type="Area2D" parent="Player" unique_id=796503142]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/InteractionArea" unique_id=360518502]
+shape = SubResource("CircleShape2D_8w0r3")
+
+[node name="Vitals" type="Node" parent="Player" unique_id=1234419441]
+script = ExtResource("3_82xsv")
+oxygen_consumption_rate = 0.006
+
+[node name="BreathingPoint" type="Marker2D" parent="Player" unique_id=1035606451]
+position = Vector2(0, -15)
+
+[node name="Health" type="Node" parent="Player" unique_id=830403293]
+script = ExtResource("4_getpj")
+
+[node name="ReviveTarget" type="Node2D" parent="Player" unique_id=1103921073]
+script = ExtResource("5_ryguw")
+
+[node name="InteractionArea" type="Area2D" parent="Player/ReviveTarget" unique_id=389088843]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/ReviveTarget/InteractionArea" unique_id=129753694]
+shape = SubResource("CircleShape2D_h4t55")
+
+[node name="Equipment" type="Node" parent="Player" unique_id=442805665]
+script = ExtResource("6_lswn8")
+
+[node name="Inventory" type="Node" parent="Player" unique_id=34574843]
+script = ExtResource("7_qsp4k")
+
+[node name="WeaponSystem" type="Node" parent="Player" unique_id=1993455932]
+script = ExtResource("8_qnost")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=2062984249]
+limit_left = -305
+limit_top = -95
+limit_right = 1585
+limit_bottom = 995
+
+[node name="WallTop" type="StaticBody2D" parent="." unique_id=1905944931]
+position = Vector2(640, 100)
+script = ExtResource("3_1bvp3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallTop" unique_id=117490613]
+shape = SubResource("RectangleShape2D_4e15o")
+
+[node name="WallButtom" type="StaticBody2D" parent="." unique_id=957423982]
+position = Vector2(640, 980)
+script = ExtResource("4_5vw27")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallButtom" unique_id=578199857]
+shape = SubResource("RectangleShape2D_ydnqi")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1533846907]
+position = Vector2(-290, 540)
+script = ExtResource("5_kek77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=656139525]
+shape = SubResource("RectangleShape2D_h2yge")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1606486325]
+position = Vector2(1570, 540)
+script = ExtResource("6_4c57u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1054666912]
+shape = SubResource("RectangleShape2D_0xm2m")
+
+[node name="MiddleWallTop" type="StaticBody2D" parent="." unique_id=789578870]
+position = Vector2(640, 200)
+script = ExtResource("7_efxa6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MiddleWallTop" unique_id=1238664564]
+shape = SubResource("RectangleShape2D_1bvp3")
+
+[node name="MiddleWallButtom" type="StaticBody2D" parent="." unique_id=234191414]
+position = Vector2(640, 700)
+script = ExtResource("8_kek77")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MiddleWallButtom" unique_id=1910922399]
+shape = SubResource("RectangleShape2D_lquwl")
+
+[node name="Door" type="StaticBody2D" parent="." unique_id=18718282]
+z_index = 5
+position = Vector2(640, 360)
+script = ExtResource("3_h2yge")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door" unique_id=2043921394]
+shape = SubResource("RectangleShape2D_cd40g")
+
+[node name="InteractionArea" type="Area2D" parent="Door" unique_id=252390125]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Door/InteractionArea" unique_id=1813005907]
+shape = SubResource("RectangleShape2D_10eym")
+
+[node name="NetworkInteractable" type="Node" parent="Door" unique_id=188679240]
+script = ExtResource("16_pjyto")
+
+[node name="Floor" type="Node2D" parent="." unique_id=809498585]
+z_index = -10
+script = ExtResource("10_4c57u")
+metadata/_edit_lock_ = true
+
+[node name="RoomRight" type="Node2D" parent="." unique_id=641781379]
+z_index = -5
+script = ExtResource("11_2cqfq")
+room_id = &"room_right"
+room_position = Vector2(655, 158)
+room_size = Vector2(900, 807)
+metadata/_edit_lock_ = true
+
+[node name="RoomLeft" type="Node2D" parent="." unique_id=592193796]
+z_index = -5
+script = ExtResource("11_2cqfq")
+room_id = &"room_left"
+room_position = Vector2(-275, 158)
+room_size = Vector2(900, 807)
+metadata/_edit_lock_ = true
+
+[node name="HullBreach" type="Node2D" parent="." unique_id=1323919975]
+z_index = 6
+position = Vector2(1450, 650)
+script = ExtResource("12_dg77c")
+
+[node name="InteractionArea" type="Area2D" parent="HullBreach" unique_id=1852711839]
+position = Vector2(-90, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HullBreach/InteractionArea" unique_id=1507867166]
+shape = SubResource("RectangleShape2D_wu3dr")
+
+[node name="WaterSystem" type="Node2D" parent="." unique_id=1815270316]
+script = ExtResource("13_ycdy4")
+metadata/_edit_lock_ = true
+
+[node name="PumpRight" type="Node2D" parent="." unique_id=1853797708]
+z_index = 6
+position = Vector2(900, 650)
+script = ExtResource("14_w48qg")
+
+[node name="InteractionArea" type="Area2D" parent="PumpRight" unique_id=1098187608]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PumpRight/InteractionArea" unique_id=1061270612]
+shape = SubResource("RectangleShape2D_g4t4i")
+
+[node name="NetworkInteractable" type="Node" parent="PumpRight" unique_id=142804643]
+script = ExtResource("16_pjyto")
+
+[node name="PowerSystem" type="Node" parent="." unique_id=763544500]
+script = ExtResource("15_2cqfq")
+
+[node name="Reactor" type="Node2D" parent="." unique_id=764047321]
+z_index = 6
+position = Vector2(-120, 850)
+script = ExtResource("16_yaehf")
+
+[node name="InteractionArea" type="Area2D" parent="Reactor" unique_id=224394989]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Reactor/InteractionArea" unique_id=1635873240]
+shape = SubResource("RectangleShape2D_nwfxe")
+
+[node name="NetworkInteractable" type="Node" parent="Reactor" unique_id=1044522125]
+script = ExtResource("16_pjyto")
+
+[node name="AtmosphereSystem" type="Node" parent="." unique_id=1936685727]
+script = ExtResource("17_074og")
+
+[node name="DebugHUD" type="CanvasLayer" parent="." unique_id=2095935328]
+visible = false
+script = ExtResource("18_cegan")
+
+[node name="RoomStatus" type="Label" parent="DebugHUD" unique_id=838093]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="HealthBar" type="ProgressBar" parent="DebugHUD" unique_id=795604092]
+offset_right = 4.0
+offset_bottom = 27.0
+
+[node name="OxygenGenerator" type="Node2D" parent="." unique_id=649642602]
+z_index = 6
+position = Vector2(260, 850)
+script = ExtResource("19_cegan")
+
+[node name="InteractionArea" type="Area2D" parent="OxygenGenerator" unique_id=1605746854]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OxygenGenerator/InteractionArea" unique_id=463413079]
+shape = SubResource("RectangleShape2D_h4t55")
+
+[node name="NetworkInteractable" type="Node" parent="OxygenGenerator" unique_id=203421548]
+script = ExtResource("16_pjyto")
+
+[node name="PressureSystem" type="Node" parent="." unique_id=1802646955]
+script = ExtResource("23_d13ii")
+
+[node name="SubmarineEnvironment" type="Node" parent="." unique_id=648350395]
+script = ExtResource("24_1u8w0")
+depth_meters = 500.0
+
+[node name="PressureRegulator" type="Node2D" parent="." unique_id=914832862]
+position = Vector2(1200, 650)
+script = ExtResource("25_0odxb")
+
+[node name="InteractionArea" type="Area2D" parent="PressureRegulator" unique_id=1639523365]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PressureRegulator/InteractionArea" unique_id=546746017]
+position = Vector2(0, 40)
+shape = SubResource("RectangleShape2D_w7mgy")
+
+[node name="NetworkInteractable" type="Node" parent="PressureRegulator" unique_id=1119321006]
+script = ExtResource("16_pjyto")
+
+[node name="DivingGearLocker" type="Node2D" parent="." unique_id=1771859312]
+position = Vector2(400, 230)
+script = ExtResource("27_a6jrf")
+
+[node name="InteractionArea" type="Area2D" parent="DivingGearLocker" unique_id=846933666]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DivingGearLocker/InteractionArea" unique_id=1878273360]
+shape = SubResource("RectangleShape2D_58dcl")
+
+[node name="OxygenTankRack" type="Node2D" parent="." unique_id=7842594]
+position = Vector2(-120, 450)
+script = ExtResource("28_xuqvo")
+
+[node name="InteractionArea" type="Area2D" parent="OxygenTankRack" unique_id=1498035773]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OxygenTankRack/InteractionArea" unique_id=148188515]
+shape = SubResource("RectangleShape2D_0tov0")
+
+[node name="MaterialLocker" type="Node2D" parent="." unique_id=2126721406]
+position = Vector2(140, 230)
+script = ExtResource("30_kq58d")
+
+[node name="InteractionArea" type="Area2D" parent="MaterialLocker" unique_id=368526480]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MaterialLocker/InteractionArea" unique_id=2060326403]
+shape = SubResource("RectangleShape2D_0tov0")
+
+[node name="WorldLabels" type="Node" parent="." unique_id=849912346]
+script = ExtResource("31_seu75")
+
+[node name="CraftingStation" type="Node2D" parent="." unique_id=1741039573]
+position = Vector2(400, 670)
+script = ExtResource("32_htxhm")
+
+[node name="InteractionArea" type="Area2D" parent="CraftingStation" unique_id=186853742]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CraftingStation/InteractionArea" unique_id=246322330]
+shape = SubResource("RectangleShape2D_i6540")
+
+[node name="WeldingToolRack" type="Node2D" parent="." unique_id=1244002374]
+position = Vector2(-120, 670)
+script = ExtResource("17_jq2sk")
+item_id = "welding_tool"
+auto_equip = true
+
+[node name="InteractionArea" type="Area2D" parent="WeldingToolRack" unique_id=80561788]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeldingToolRack/InteractionArea" unique_id=1743355305]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="WeldingFuelRack" type="Node2D" parent="." unique_id=270151201]
+position = Vector2(140, 670)
+script = ExtResource("17_jq2sk")
+item_id = "welding_fuel"
+
+[node name="InteractionArea" type="Area2D" parent="WeldingFuelRack" unique_id=579015263]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WeldingFuelRack/InteractionArea" unique_id=1106223392]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="WrenchRack" type="Node2D" parent="." unique_id=1895634270]
+position = Vector2(140, 450)
+script = ExtResource("17_jq2sk")
+item_id = "wrench"
+auto_equip = true
+
+[node name="InteractionArea" type="Area2D" parent="WrenchRack" unique_id=734549589]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WrenchRack/InteractionArea" unique_id=950457656]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="ScrewdriverRack" type="Node2D" parent="." unique_id=805057046]
+position = Vector2(400, 450)
+script = ExtResource("17_jq2sk")
+item_id = "screwdriver"
+auto_equip = true
+
+[node name="InteractionArea" type="Area2D" parent="ScrewdriverRack" unique_id=1359455024]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ScrewdriverRack/InteractionArea" unique_id=1769432861]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="ReactorRepairPoint" type="Node2D" parent="." unique_id=2042487256]
+position = Vector2(40, 850)
+script = ExtResource("34_4k2k6")
+device_name = "REACTOR"
+device_path = NodePath("../Reactor")
+repair_type = "electrical"
+
+[node name="InteractionArea" type="Area2D" parent="ReactorRepairPoint" unique_id=406680420]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ReactorRepairPoint/InteractionArea" unique_id=2132013857]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="NetworkInteractable" type="Node" parent="ReactorRepairPoint" unique_id=1630433773]
+script = ExtResource("16_pjyto")
+
+[node name="OxygenGeneratorRepairPoint" type="Node2D" parent="." unique_id=511579685]
+position = Vector2(420, 850)
+script = ExtResource("34_4k2k6")
+device_name = "OXYGEN GENERATOR"
+device_path = NodePath("../OxygenGenerator")
+repair_type = "electrical"
+
+[node name="InteractionArea" type="Area2D" parent="OxygenGeneratorRepairPoint" unique_id=1165691521]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="OxygenGeneratorRepairPoint/InteractionArea" unique_id=1483539084]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="NetworkInteractable" type="Node" parent="OxygenGeneratorRepairPoint" unique_id=107110163]
+script = ExtResource("16_pjyto")
+
+[node name="PumpRepairPoint" type="Node2D" parent="." unique_id=115686759]
+position = Vector2(900, 840)
+script = ExtResource("34_4k2k6")
+device_name = "WATER PUMP"
+device_path = NodePath("../PumpRight")
+
+[node name="InteractionArea" type="Area2D" parent="PumpRepairPoint" unique_id=595522446]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PumpRepairPoint/InteractionArea" unique_id=1108617020]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="NetworkInteractable" type="Node" parent="PumpRepairPoint" unique_id=1780894858]
+script = ExtResource("16_pjyto")
+
+[node name="PressureRegulatorRepairPoint" type="Node2D" parent="." unique_id=1033620511]
+position = Vector2(1200, 840)
+script = ExtResource("34_4k2k6")
+device_name = "PRESSURE REGULATOR"
+device_path = NodePath("../PressureRegulator")
+
+[node name="InteractionArea" type="Area2D" parent="PressureRegulatorRepairPoint" unique_id=505771045]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PressureRegulatorRepairPoint/InteractionArea" unique_id=450043820]
+shape = SubResource("RectangleShape2D_as0yd")
+
+[node name="NetworkInteractable" type="Node" parent="PressureRegulatorRepairPoint" unique_id=860416502]
+script = ExtResource("16_pjyto")
+
+[node name="TestBot" type="CharacterBody2D" parent="." unique_id=260961496]
+position = Vector2(800, 500)
+script = ExtResource("35_0rl1p")
+test_mode = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="TestBot" unique_id=515845685]
+shape = SubResource("CircleShape2D_w7mgy")
+
+[node name="Inventory" type="Node" parent="TestBot" unique_id=1571820946]
+script = ExtResource("7_qsp4k")
+
+[node name="Equipment" type="Node" parent="TestBot" unique_id=537157208]
+script = ExtResource("6_lswn8")
+keyboard_tool_selection_enabled = false
+
+[node name="ExteriorQATest" type="Node" parent="TestBot" unique_id=1354734815]
+script = ExtResource("36_4lmeg")
+
+[node name="HatchQATest" type="Node" parent="TestBot" unique_id=135892817]
+script = ExtResource("37_d2t1y")
+
+[node name="CreatureQATest" type="Node" parent="TestBot" unique_id=1781961821]
+script = ExtResource("38_0n3wm")
+
+[node name="WeaponQATest" type="Node" parent="TestBot" unique_id=1882058990]
+script = ExtResource("40_f6a44")
+
+[node name="HullAttackQATest" type="Node" parent="TestBot" unique_id=706729561]
+script = ExtResource("41_hrvbo")
+
+[node name="SubmarineWeaponQATest" type="Node" parent="TestBot" unique_id=1786603095]
+script = ExtResource("42_abqjc")
+
+[node name="EncounterQATest" type="Node" parent="TestBot" unique_id=755175876]
+script = ExtResource("43_4w656")
+
+[node name="MissionSuccessQATest" type="Node" parent="TestBot" unique_id=1803681246]
+script = ExtResource("44_rnkwl")
+
+[node name="HullNetworkQATest" type="Node" parent="TestBot" unique_id=584337520]
+script = ExtResource("46_1vm84")
+
+[node name="HullRepairNetworkQATest" type="Node" parent="TestBot" unique_id=1643803351]
+script = ExtResource("47_wu3dr")
+
+[node name="PersonalAmmoNetworkQATest" type="Node" parent="TestBot" unique_id=1540010949]
+script = ExtResource("48_cyx1q")
+
+[node name="PersonalAmmoAPIDiagnostic" type="Node" parent="TestBot" unique_id=768714825]
+script = ExtResource("49_0dhbp")
+start_on_run = false
+
+[node name="PowerNetworkQATest" type="Node" parent="TestBot" unique_id=862363475]
+script = ExtResource("50_kkkcx")
+
+[node name="PowerNetworkQATest2" type="Node" parent="TestBot" unique_id=1622145596]
+script = ExtResource("50_kkkcx")
+
+[node name="ReviveNetworkQATest" type="Node" parent="TestBot" unique_id=1102022634]
+script = ExtResource("51_c2n8d")
+
+[node name="CrewRoundNetworkQATest" type="Node" parent="TestBot" unique_id=313505014]
+script = ExtResource("52_wy5fy")
+
+[node name="MissionNetworkQATest" type="Node" parent="TestBot" unique_id=1109144434]
+script = ExtResource("53_phcyf")
+
+[node name="RestartPolicyNetworkQATest" type="Node" parent="TestBot" unique_id=1129518025]
+script = ExtResource("54_birbe")
+
+[node name="PlayerMovementNetworkQATest" type="Node" parent="TestBot" unique_id=1578724420]
+script = ExtResource("55_f1p13")
+
+[node name="ReconnectStateNetworkQATest" type="Node" parent="TestBot" unique_id=857048412]
+script = ExtResource("56_4obbf")
+
+[node name="GlobalSkeletonNetworkQATest" type="Node" parent="TestBot" unique_id=1520234761]
+script = ExtResource("57_ovcoh")
+
+[node name="MachineFailureSystem" type="Node" parent="." unique_id=1015538132]
+script = ExtResource("36_ok6jj")
+automatic_faults_enabled = false
+test_fault_mode = 4
+
+[node name="GameplayHUD" type="CanvasLayer" parent="." unique_id=951971479]
+script = ExtResource("37_facbu")
+
+[node name="SubmarineHelm" type="Node2D" parent="." unique_id=73028806]
+position = Vector2(-120, 230)
+script = ExtResource("38_b1qrp")
+
+[node name="InteractionArea" type="Area2D" parent="SubmarineHelm" unique_id=1004801060]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubmarineHelm/InteractionArea" unique_id=469281425]
+shape = SubResource("RectangleShape2D_paknd")
+
+[node name="NetworkInteractable" type="Node" parent="SubmarineHelm" unique_id=2040419674]
+script = ExtResource("16_pjyto")
+
+[node name="SubmarineStatus" type="Node" parent="." unique_id=451486330]
+script = ExtResource("39_come4")
+
+[node name="MissionState" type="Node" parent="." unique_id=1771943935]
+script = ExtResource("40_h8e4i")
+
+[node name="InteriorTestPoint" type="Marker2D" parent="." unique_id=1107830383]
+position = Vector2(220, 450)
+
+[node name="ExteriorTestPoint" type="Marker2D" parent="." unique_id=1486826448]
+position = Vector2(1650, 250)
+
+[node name="ExteriorHatch" type="Node2D" parent="." unique_id=704935094]
+position = Vector2(850, 158)
+script = ExtResource("43_gngh3")
+
+[node name="InteractionArea" type="Area2D" parent="ExteriorHatch" unique_id=256292984]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ExteriorHatch/InteractionArea" unique_id=1454014838]
+shape = SubResource("RectangleShape2D_n26i0")
+
+[node name="HatchInteriorPoint" type="Marker2D" parent="." unique_id=2041493669]
+position = Vector2(820, 220)
+
+[node name="HatchExteriorPoint" type="Marker2D" parent="." unique_id=236107322]
+position = Vector2(850, 75)
+
+[node name="SeaCreature" type="CharacterBody2D" parent="." unique_id=311458226 groups=["damageable_creature"]]
+position = Vector2(1080, 75)
+script = ExtResource("45_qnost")
+hull_attack_damage = 50.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SeaCreature" unique_id=1555908639]
+
+[node name="HarpoonGunRack" type="Node2D" parent="." unique_id=1564612509]
+position = Vector2(950, 380)
+script = ExtResource("48_0cbny")
+item_id = "harpoon_gun"
+auto_equip = true
+
+[node name="InteractionArea" type="Area2D" parent="HarpoonGunRack" unique_id=1075991423]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HarpoonGunRack/InteractionArea" unique_id=682469473]
+shape = SubResource("RectangleShape2D_l3xep")
+
+[node name="HarpoonAmmoRack" type="Node2D" parent="." unique_id=1372669728]
+position = Vector2(1250, 380)
+script = ExtResource("48_0cbny")
+item_id = "harpoon_ammo"
+quantity_per_interaction = 6
+
+[node name="InteractionArea" type="Area2D" parent="HarpoonAmmoRack" unique_id=1020455632]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HarpoonAmmoRack/InteractionArea" unique_id=371874112]
+shape = SubResource("RectangleShape2D_md32b")
+
+[node name="HullIntegrityPoint" type="Node2D" parent="." unique_id=1202898187]
+position = Vector2(1080, 158)
+script = ExtResource("50_uypp3")
+
+[node name="SubmarineTurret" type="Node2D" parent="." unique_id=2007869865]
+position = Vector2(970, 135)
+script = ExtResource("52_6iyjs")
+
+[node name="SubmarineTurretConsole" type="Node2D" parent="." unique_id=441299223]
+position = Vector2(1400, 230)
+script = ExtResource("53_4w656")
+
+[node name="InteractionArea" type="Area2D" parent="SubmarineTurretConsole" unique_id=928009444]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SubmarineTurretConsole/InteractionArea" unique_id=1820787999]
+shape = SubResource("RectangleShape2D_jfax6")
+disabled = true
+
+[node name="EncounterManager" type="Node" parent="." unique_id=1022020959]
+script = ExtResource("55_e71vb")
+
+[node name="MissionObjective" type="Node" parent="." unique_id=1821156452]
+script = ExtResource("57_vke2r")
+
+[node name="MobileJoystick" type="CanvasLayer" parent="." unique_id=2779357]
+script = ExtResource("58_vke2r")
+
+[node name="NetworkDebugPanel" type="CanvasLayer" parent="." unique_id=1687090695]
+script = ExtResource("59_uit24")
+
+[node name="NetworkPlayerManager" type="Node" parent="." unique_id=446109475]
+script = ExtResource("60_ruth0")
+
+[node name="NetworkInteractionManager" type="Node" parent="." unique_id=926106999]
+script = ExtResource("61_rm4vd")
+
+[node name="NetworkEnvironmentManager" type="Node" parent="." unique_id=452836987]
+script = ExtResource("63_sm6fg")
+
+[node name="NetworkCreatureManager" type="Node" parent="." unique_id=1924939429]
+script = ExtResource("64_b17eg")
+
+[node name="NetworkCombatManage" type="Node" parent="." unique_id=634802115]
+script = ExtResource("65_ntx8l")
+
+[node name="NetworkPlayerHealthManager" type="Node" parent="." unique_id=1037690420]
+script = ExtResource("66_uatky")
+
+[node name="NetworkHullManager" type="Node" parent="." unique_id=637577043]
+script = ExtResource("67_rqtf5")
+
+[node name="NetworkPowerManager" type="Node" parent="." unique_id=2101320394]
+script = ExtResource("72_jx0wj")
+
+[node name="NetworkReviveManager" type="Node" parent="." unique_id=1663634513]
+script = ExtResource("74_34ol3")
+
+[node name="NetworkCrewRoundManager" type="Node" parent="." unique_id=1609146500]
+script = ExtResource("77_gx4rg")
+
+[node name="NetworkMissionManager" type="Node" parent="." unique_id=1358511530]
+script = ExtResource("79_birbe")
+
+[node name="AndroidNetworkJoinPanel" type="CanvasLayer" parent="." unique_id=787698270]
+script = ExtResource("84_ppx11")
+
+[node name="CoopQARunner" type="Node" parent="." unique_id=76159814]
+script = ExtResource("85_1yv1y")
